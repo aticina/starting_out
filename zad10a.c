@@ -312,29 +312,29 @@ position_list findStateByName(linkedList states, char stateName[])
     }
 
     current = states.next;
-    printf("Ovo je states.next %p", states.next);
-    printf("Ovo je current->next %s", current->next);
+    //printf("Ovo je states.next %p", states.next);
+    //printf("Ovo je current->next %s", current->next);
     if(!(strcmp(stateName, current->next))){
         return current->next;
 
     while (current->next != NULL && (strcmp(current->stateName, stateName))){
         current = current->next;
-        printf("Ovo je current %s", current);
-        printf("Ovo je current->next %s", current->next);
+       // printf("Ovo je current %s", current);
+        //printf("Ovo je current->next %s", current->next);
 
     if (!(strcmp(stateName, current->next->stateName)))
     {
 
-        printf("Ovo je stateName %s", stateName);
-        printf("Ovo je current->next->stateName %s", current->next->stateName);
+        //printf("Ovo je stateName %s", stateName);
+        //printf("Ovo je current->next->stateName %s", current->next->stateName);
         return current->next;
     } 
     }
-    printf("Ovo je states.next %p", states.next);
-    printf("Ovo je current->next", current->next);
+   // printf("Ovo je states.next %p", states.next);
+    //printf("Ovo je current->next", current->next);
     current = current->next;
-    printf("Ovo je current->next", current->next);
-    return current;
+    //printf("Ovo je current->next", current->next);
+    return NULL;
 }
 
 position_tree findCityByName(position_tree current, char cityName[])
@@ -406,7 +406,7 @@ int Menu(linkedList states)
             scanf(" %s", stateName);
 
             currentList = findStateByName(states, stateName);
-            printf("Ovo je currentList %s", currentList);
+            //printf("Ovo je currentList %s", currentList);
             if (!currentList)
                 printf("\n\tTa drzava ne postoji!\n");
 
