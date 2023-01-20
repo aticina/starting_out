@@ -314,6 +314,8 @@ position_list findStateByName(linkedList states, char stateName[])
     current = states.next;
     printf("Ovo je states.next %p", states.next);
     printf("Ovo je current->next %s", current->next);
+    if(!(strcmp(stateName, current->next))){
+        return current->next;
 
     while (current->next != NULL && (strcmp(current->stateName, stateName))){
         current = current->next;
